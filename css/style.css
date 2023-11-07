@@ -85,31 +85,13 @@ body {
   padding: 0 15px;
 }
 
-.header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding: 30px 0;
-}
-
-.header__btn {
-  color: var(--White, #fff);
-  font-weight: 500;
-  padding: 18px 52px;
-  border-radius: 12px;
-  background: var(--Dark-blue, #3ca9f0);
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
-  border: none;
-}
-
-.header__btn:hover {
-  background: var(--Dark-blue, #559dcd);
+.header {
+  padding-top: 61px;
 }
 
 .modal__wrapper {
   display: flex;
+  padding: 30px;
   justify-content: space-between;
   align-items: start;
   gap: 30px;
@@ -303,7 +285,8 @@ body {
   .modal__wrapper {
     flex-wrap: wrap;
   }
-  .modal__img {
+  .modal__img,
+  .modal__content {
     margin: 0 auto;
   }
 }
