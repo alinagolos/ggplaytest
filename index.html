@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat&family=Roboto+Slab:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <header>
+    <div class="container">
+      <div class="header__wrapper">
+        <a href="#">
+          <img class="header__logo" src="images/Logo.svg" alt="logo"
+        /></a>
+        <button class="header__btn">Создать презентацию</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="modal">
+      <div class="container">
+        <div class="modal__wrapper">
+          <img class="modal__img" src="images/img.svg" alt="image" />
+          <form class="modal__content">
+            <h2 class="modal__content-title">01 Заполни форму</h2>
+            <div class="modal__content-wrapper">
+              <div class="modal__theme">
+                <label class="modal__theme-label" for="theme">Тема урока</label>
+                <input
+                  class="modal__theme-input"
+                  name="theme"
+                  id="theme"
+                  onchange="toggleButton()"
+                  type="text"
+                  placeholder="Напиши что-то конкретное"
+                  required
+                />
+                <button onclick="clearSearch()" class="modal__theme-btn">
+                  <img src="images/del.svg" alt="del" />
+                </button>
+              </div>
+              <div class="modal__class">
+                <label class="modal__class-label" for="class">Класс</label>
+                <select class="modal__class-select" id="class">
+                  <option value="class1">1</option>
+                  <option value="class2">2</option>
+                  <option value="class3">3</option>
+                  <option value="class4">4</option>
+                  <option value="class5">5</option>
+                  <option value="class6">6</option>
+                  <option value="class7">8</option>
+                  <option value="class9">9</option>
+                  <option value="class10">10</option>
+                  <option value="class11">11</option>
+                </select>
+              </div>
+            </div>
+            <div class="modal__content-theme-list">
+              <ul class="modal__theme-items" id="theme-visible">
+                <li class="modal__theme-item" data-value="1">
+                  <a href="#">Генетика</a>
+                </li>
+                <li class="modal__theme-item" data-value="2">
+                  <a href="#">Анатомия человека</a>
+                </li>
+                <li class="modal__theme-item" data-value="3">
+                  <a href="#">Вулканы</a>
+                </li>
+                <li class="modal__theme-item" data-value="4">
+                  <a href="#">Зимние виды спорта</a>
+                </li>
+                <li class="modal__theme-item" data-value="5">
+                  <a href="#">Радуга</a>
+                </li>
+                <li class="modal__theme-item" data-value="6">
+                  <a href="#"> Индийская культура</a>
+                </li>
+                <li class="modal__theme-item" data-value="7">
+                  <a href="#">Вулканы</a>
+                </li>
+                <li class="modal__theme-item" data-value="8">
+                  <a href="#"> Зимние виды спорта</a>
+                </li>
+                <li class="modal__theme-item" data-value="1">
+                  <a href="#">Пеший туризм</a>
+                </li>
+              </ul>
+              <ul class="modal__theme-items" id="theme-hidden">
+                <li class="modal__theme-item" data-value="2">
+                  <a href="#">Философия</a>
+                </li>
+                <li class="modal__theme-item" data-value="3">
+                  <a href="#">Вселенная</a>
+                </li>
+                <li class="modal__theme-item" data-value="4">
+                  <a href="#">Здоровые привычки</a>
+                </li>
+                <li class="modal__theme-item" data-value="5">
+                  <a href="#">Бабочки</a>
+                </li>
+                <li class="modal__theme-item" data-value="6">
+                  <a href="#"> Белые медведи</a>
+                </li>
+                <li class="modal__theme-item" data-value="7">
+                  <a href="#">Экономика</a>
+                </li>
+                <li class="modal__theme-item" data-value="8">
+                  <a href="#"> Финансовая грамотность</a>
+                </li>
+                <li class="modal__theme-item" data-value="8">
+                  <a href="#"> Фотосинтез</a>
+                </li>
+              </ul>
+              <button class="modal__theme-show" id="showThemesButton">
+                + Показать больше вариантов
+              </button>
+            </div>
+            <div class="modal__content-form-area">
+              <label class="modal__form-area-label" for="textarea"
+                >Цель урока</label
+              >
+              <textarea
+                required
+                id="textarea"
+                class="modal__form-area"
+                onchange="toggleButton()"
+                oninput="checkInputLength()"
+                placeholder="Напиши свою учебную цель"
+                name="textarea"
+              ></textarea>
+              <span id="current">0/200</span>
+            </div>
+
+            <div class="modal__content-buttons">
+              <button class="modal__content-btn-back">Назад</button>
+              <button id="btn-next" disabled class="modal__content-btn-next">
+                Следующий шаг
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <body>
+    <script src="js/script.js"></script>
+  </body>
+</html>
